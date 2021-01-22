@@ -53,7 +53,7 @@ with open("pitch_data/wakefti_games.csv", "wt+", newline="") as file:
             if "class" in row.attrs:
                 if "thead" in row.attrs["class"]:
                     continue
-            csv_row = [cell.get_text() for cell in row.findAll(["td", ""th])]
+            csv_row = [cell.get_text() for cell in row.findAll(["td", "th"])]
 
             # Above is the list comprehension version of the following
             # for loop:
